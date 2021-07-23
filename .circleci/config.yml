@@ -2,6 +2,11 @@
 version: 2.1
 # Use a package of configuration called an orb.
 jobs:
+  print_variable:
+    docker:
+      - image: circleci/node:13.8.0
+    steps:
+      - run: echo $EnvVariable
   print_hello:
     docker:
       - image: circleci/node:13.8.0
